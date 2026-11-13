@@ -4,6 +4,7 @@ export interface wishListInitialState {
   price: number;
   image: string;
   category: string;
+  quantity: number;
 }
 export interface wishListType {
   wishList: wishListInitialState[];
