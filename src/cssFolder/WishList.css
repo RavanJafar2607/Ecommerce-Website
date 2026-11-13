@@ -1,0 +1,123 @@
+.favoritesContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--basketBackground);
+  width: 450px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 998;
+  overflow-y: scroll;
+}
+.favoritesBg {
+  background-color: rgb(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 999;
+}
+.favoritesHeader {
+  width: 100%;
+  background-color: var(--bg-main);
+  color: var(--hFTextColor);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  border-radius: 0px 0px 20px 20px;
+}
+.favoritesHeader h4 {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--hFTextColor);
+}
+.favoritesHeader button {
+  text-align: center;
+  font-size: 18px;
+  background-color: var(--hFBackGround);
+  border: var(--border);
+  border-radius: var(--border-radius1);
+  color: var(--hFTextColor);
+  padding: 3px;
+}
+.singleProduct {
+  width: 250px;
+  height: max-content;
+  background-color: var(--cardBackground);
+  margin-top: 10px;
+  border-radius: var(--border-radius1);
+  color: var(--hFTextColor);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  box-shadow: 0px 6px 4px rgb(0, 0, 0, 0.7);
+}
+.imgBtn img {
+  width: 50px;
+  height: 50px;
+}
+.imgBtn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.imgBtn button {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 18px;
+  background-color: var(--hFBackGround);
+  border: var(--border);
+  border-radius: var(--border-radius1);
+  padding: 3px;
+  color: var(--hFTextColor);
+}
+.productText h4 {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--hfTextColor);
+}
+.productText p {
+  font-weight: 800;
+  color: var(--hfTextColor);
+}
+.productText strong {
+  color: var(--priceColor);
+  font-weight: 900;
+  font-size: 18px;
+}
+.wishListBtns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.wishListBtns button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: var(--border-radius1);
+  border: 1px solid var(--border);
+  background-color: var(--hFBackGround);
+  font-weight: 800;
+  font-size: 12px;
+}
+.favoritesText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+}
+.favoritesText p {
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--hfTextColor);
+}

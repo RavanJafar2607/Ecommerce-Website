@@ -1,0 +1,225 @@
+.products {
+  margin-top: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--bg-main);
+  animation: cixma 0.8s ease forwards;
+}
+.productsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: max-content;
+  padding: 20px;
+  gap: 20px;
+  overflow-x: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius1);
+}
+.productsItem {
+  position: relative;
+  width: 230px;
+  height: 320px;
+  border-radius: var(--border-radius1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid var(--border);
+  transition: all ease 0.3s;
+  background-color: var(--cardBackground);
+  gap: 5px;
+}
+.productsItem:hover {
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.7);
+  transform: translateY(-5px);
+  z-index: 15;
+}
+.itemP {
+  font-size: 12px;
+  font-weight: 900;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  color: var(--hFTextColor);
+}
+.itemPrice {
+  width: 100%;
+  font-size: 17px;
+  font-weight: 800;
+  display: flex;
+  justify-content: start;
+  color: var(--priceColor);
+}
+.menu {
+  position: absolute;
+  top: 230px;
+  bottom: 20px;
+  left: 0;
+  border: 1px solid var(--border);
+  background-color: var(--cardBackground);
+  width: 100%;
+  height: max-content;
+  padding: 10px;
+  border-radius: var(--border-radius1);
+  transition: all ease 0.4s;
+  animation: cixmaq ease 0.4s forwards;
+  z-index: 20px;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+.addWishlist {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  background-color: rgb(218, 217, 217);
+  padding: 5px;
+  height: 100%;
+  width: 26%;
+  border-radius: var(--border-radius1);
+  font-size: 20px;
+  text-align: center;
+}
+.addBtns {
+  text-align: center;
+  width: 100%;
+  border-radius: var(--border-radius1);
+  border: 1px solid var(--border);
+  font-weight: 700;
+  font-size: 15px;
+  background-color: var(--hFBackGround);
+}
+.gorunme {
+  display: none;
+}
+@keyframes cixmaq {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.detailsDiV {
+  position: relative;
+  display: flex;
+}
+.detailsDiV button {
+  position: absolute;
+  left: 70px;
+  bottom: 50px;
+  background-color: var(--hFBackGround);
+  border-radius: var(--border-radius1);
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+  font-weight: 900;
+  text-align: center;
+  transition: all ease 0.4s;
+}
+button:active {
+  transform: scale(1.1);
+}
+.productsTags {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  box-shadow: 0 6px 4px rgb(0 0 0 0.7);
+  background-color: var(--bg-main);
+  color: var(--hFTextColor);
+}
+.productsTags h4 {
+  color: var(--hFTextColor);
+  background-color: var(--hFBackGround);
+  padding: 5px;
+  border-radius: var(--border-radius1);
+}
+.productsTags section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-radius: var(--border-radius1);
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 4px rgb(0, 0, 0, 0.7);
+  width: max-content;
+  height: max-content;
+  padding: 10px;
+}
+.productsTags input {
+  color: var(--priceColor);
+  padding: 5px;
+  border-radius: var(--border-radius1);
+  border: 1px solid var(--border);
+  outline: none;
+}
+.productsTags select {
+  padding: 5px;
+  border-radius: var(--border-radius1);
+  border: 1px solid var(--border);
+  color: var(--priceColor);
+}
+.product-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  color: var(--priceColor);
+}
+@media (max-width: 1024px) {
+  section {
+    flex-direction: column;
+    height: auto;
+  }
+  .searchIcon {
+    text-align: center;
+  }
+  .productsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    align-self: center;
+    width: max-content;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    height: auto;
+  }
+  .searchIcon {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .searchIcon {
+    text-align: center;
+  }
+}
+@keyframes cixma {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 9;
+  }
+}

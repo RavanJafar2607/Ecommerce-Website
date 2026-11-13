@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+:root {
+  --hFBackGround: rgb(0, 157, 255);
+  --hFTextColor: rgba(26, 26, 26, 0.888);
+  --lineColor: #ffffff;
+  --buttonBackground: #ffffff;
+  --buttonColor: rgba(26, 26, 26, 0.888);
+  --border: rgb(190, 189, 189);
+  --border-radius1: 10px;
+  --bg-main: rgb(224, 224, 237);
+  --border-left-color: #000000;
+  --priceColor: rgb(234, 79, 79);
+  --cardBackground: rgb(217, 217, 226);
+  --detailsBackGround: rgb(229, 210, 210);
+  --menuBackground: rgb(223, 223, 232);
+  --basketBackground: rgb(184, 178, 178);
+  --contactBg: rgba(255, 255, 255, 0.2);
+}
+
+.dark {
+  --hFBackGround: rgb(0, 110, 180);
+  --hFTextColor: rgb(245, 245, 245);
+  --lineColor: rgb(80, 80, 90);
+  --contactBg: rgba(0, 0, 0, 0.2);
+  --buttonBackground: rgb(35, 35, 42);
+  --buttonColor: rgb(245, 245, 245);
+
+  --border: rgb(70, 70, 80);
+  --border-left-color: rgb(120, 120, 130);
+
+  --bg-main: rgb(18, 18, 22);
+  --priceColor: rgb(255, 100, 100);
+
+  --cardBackground: rgb(28, 28, 34);
+  --detailsBackGround: rgb(48, 38, 40);
+
+  --menuBackground: rgb(32, 32, 39);
+  --basketBackground: rgb(45, 45, 52);
+}
+
+html,
+body,
+#root {
+  background-color: var(--bg-main);
+  width: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+.contactContainer,
+input,
+textarea,
+button,
+header,
+footer,
+div,
+p,
+span {
+  transition:
+    background-color 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease;
+}
+button:hover {
+  cursor: pointer;
+}

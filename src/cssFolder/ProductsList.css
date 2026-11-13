@@ -1,0 +1,143 @@
+.productsListContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--basketBackground);
+  width: 450px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 998;
+  overflow-y: scroll;
+}
+.basketBg {
+  background-color: rgb(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 999;
+}
+.basketHeader {
+  width: 100%;
+  background-color: var(--bg-main);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  border-radius: 0px 0px 20px 20px;
+}
+.basketHeader h4 {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--hFTextColor);
+}
+.basketHeader button {
+  text-align: center;
+  font-size: 18px;
+  background-color: var(--hFBackGround);
+  border: var(--border);
+  border-radius: var(--border-radius1);
+  color: var(--hFTextColor);
+  padding: 3px;
+}
+.basketItemSingle {
+  width: 250px;
+  height: max-content;
+  background-color: var(--cardBackground);
+  margin-top: 10px;
+  border-radius: var(--border-radius1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  box-shadow: 0px 6px 4px rgb(0, 0, 0, 0.7);
+}
+.imgContainer img {
+  width: 50px;
+  height: 50px;
+}
+.imgContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.imgContainer button {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 18px;
+  background-color: var(--hFBackGround);
+  border: var(--border);
+  border-radius: var(--border-radius1);
+  color: var(--hFTextColor);
+  padding: 3px;
+}
+.itemDetails h4 {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--hFTextColor);
+}
+.itemDetails p {
+  font-weight: 800;
+  color: var(--hFTextColor);
+}
+.priceTag strong {
+  color: var(--priceColor);
+  font-weight: 900;
+  font-size: 18px;
+}
+.quantityAction button {
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background-color: var(--hFBackGround);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius1);
+  font-weight: 900;
+  font-size: 18px;
+}
+.quantityAction {
+  display: flex;
+  align-items: center;
+}
+.quantityAction span {
+  font-weight: 900;
+  font-size: 18px;
+  text-align: center;
+}
+.textContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+}
+.textContainer p {
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--hFTextColor);
+}
+.totalCnt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--hFBackGround);
+  margin-top: 10px;
+  padding: 20px;
+  margin-top: auto;
+}
+.totalCnt h4 {
+  color: var(--hFTextColor);
+  font-size: 18px;
+  font-weight: 900;
+}
+.totalCnt h4 strong {
+  color: var(--priceColor);
+  font-size: 18px;
+  font-weight: 900;
+}

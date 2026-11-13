@@ -1,0 +1,115 @@
+.detailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--detailsBackGround);
+  animation: cixma 0.8s ease forwards;
+}
+.detailsLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--line-color);
+  padding: 10px;
+  border-radius: var(--border-radius1);
+  color: var(--hFTextColor);
+}
+.details {
+  width: min-content;
+  border: 2px solid var(--border);
+  padding: 15px;
+  margin-top: 50px;
+  border-radius: var(--border-radius1);
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.5);
+  background-color: var(--menuBackground);
+}
+.imgText {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 650px;
+}
+.imgText img {
+  width: 250px;
+  height: 250px;
+}
+.imgText p {
+  text-align: left;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: var(--hFTextColor);
+}
+.detailsBtns {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+.detailsBtns button {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius1);
+  padding: 5px;
+  color: var(--hFTextColor);
+  background-color: var(--line-color);
+  transition: all ease 0.4s;
+  font-weight: 700;
+}
+.detailsBtns button:hover {
+  background-color: var(--hFBackGround);
+}
+.productRatingPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.productRatingPrice p {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--hFTextColor);
+}
+.productRatingPrice strong {
+  color: var(--priceColor);
+}
+@media (max-width: 1024px) {
+  .details {
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+  }
+  .productRatingPrice p {
+    font-size: 13px;
+  }
+  .imgText {
+    align-items: center;
+    justify-content: start;
+  }
+  .imgText img {
+    width: 120px;
+    height: 120px;
+  }
+  .imgText p {
+    width: 250px;
+    font-size: 13px;
+  }
+  .detailsBtns {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@keyframes cixma {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 9;
+  }
+}

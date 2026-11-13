@@ -1,0 +1,198 @@
+main {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  animation: cixma 0.8s ease forwards;
+}
+
+.imageSlider {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contentDiv {
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  transition: background-color 0.4s ease;
+  justify-content: center;
+  align-items: center;
+}
+.contentItem {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  width: 550px;
+  transition: all 0.4s ease;
+}
+
+main:hover .contentDiv {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+main:hover .contentItem {
+  display: flex;
+}
+.contentDiv p {
+  color: #ffff;
+  font-weight: 800;
+  font-size: 20px;
+}
+.contentButton button {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: #fff;
+  border-radius: var(--border-radius1);
+  padding: 10px;
+  position: relative;
+}
+.contentButton button::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background-color: var(--buttonBackground);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: var(--border-radius1);
+  opacity: 0.4;
+  transition: all 0.7s ease;
+}
+.contentButton button:hover::before {
+  width: 100%;
+}
+.contentDiv button:active {
+  transform: rotateX(5deg);
+}
+@keyframes cixma {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 9;
+  }
+}
+.selectedProduct {
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--border);
+  padding: 60px 0;
+  background-color: var(--bg-main);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.ticker-wrapper {
+  display: flex;
+  width: max-content;
+  gap: 50px;
+  animation: firlanma 20s linear infinite;
+}
+.ticker-wrapper h4 {
+  color: var(--hFTextColor);
+}
+.sProducts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  text-align: center;
+}
+.sProducts img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.sProducts h4 {
+  color: var(--priceColor);
+}
+.getProduct {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.getProduct button {
+  border-radius: var(--border-radius1);
+  background-color: var(--buttonBackground);
+  color: var(--buttonColor);
+  border: 1px solid var(--border);
+  width: 150px;
+  padding: 3px;
+  font-size: 14px;
+  font-weight: 800;
+}
+@keyframes firlanma {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  background-color: var(--bg-main);
+}
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: var(--border-left-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.product-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  color: var(--priceColor);
+}
+@media (max-width: 1024px) {
+  .contentDiv {
+    justify-content: center;
+    align-items: center;
+  }
+  .contentButton {
+    width: max-content;
+  }
+  .contentP {
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+}
