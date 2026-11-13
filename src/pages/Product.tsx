@@ -86,6 +86,7 @@ function Product() {
       image: item.image,
       price: item.price,
       category: item.category,
+      quantity: item.quantity,
     };
     dispatch(addWishList(newProduct));
     const isAlreadyFav = wishList.some(
